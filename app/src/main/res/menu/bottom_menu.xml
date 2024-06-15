@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:title="Home"
+        android:title="Inicio"
         android:icon="@drawable/vector_home"
-        android:id="@+id/home"></item>
+        android:id="@+id/inicio"></item>
 
     <item
-        android:title="Favorite"
+        android:title="Favoritos"
         android:icon="@drawable/vector_favorite"
-        android:id="@+id/favorite"></item>
+        android:id="@+id/favoritos"></item>
 
     <item
-        android:title="Account"
+        android:title="Perfil"
         android:icon="@drawable/vector_account"
-        android:id="@+id/account"></item>
+        android:id="@+id/perfil"></item>
 </menu>
