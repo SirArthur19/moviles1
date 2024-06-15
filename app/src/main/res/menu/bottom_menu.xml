@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Home"
+        android:icon="@drawable/vector_home"
+        android:id="@+id/home"></item>
+
+    <item
+        android:title="Favorite"
+        android:icon="@drawable/vector_favorite"
+        android:id="@+id/favorite"></item>
+
+    <item
+        android:title="Account"
+        android:icon="@drawable/vector_account"
+        android:id="@+id/account"></item>
+</menu>
