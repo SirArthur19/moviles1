@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/itemNotas"
+        android:title="Notas"
+        android:icon="@drawable/vector_note"/>
+
+    <item
+        android:id="@+id/itemBiblioteca"
+        android:title="Biblioteca"
+        android:icon="@drawable/vector_library"/>
+
+    <item
+        android:id="@+id/itemAjustes"
+        android:title="Ajustes"
+        android:icon="@drawable/vector_settings"/>
+
+    <item
+        android:id="@+id/itemContacto"
+        android:title="Contacto"
+        android:icon="@drawable/vector_contact"/>
+
+</menu>

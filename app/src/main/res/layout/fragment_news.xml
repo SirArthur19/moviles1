@@ -3,13 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#FFFFFF">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#D03C3F41">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#3C3F41"
+        app:title="Noticias"
+        app:titleTextColor="#FFFFFF"
+        app:subtitle="Las Noticias del día"
+        app:subtitleTextColor="#FFFFFF"
+        app:navigationIcon="@drawable/vector_lines">
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerNoticias"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_noticia">
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_noticia"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarNews"
+        android:paddingBottom="70dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -1,20 +1,27 @@
 package com.cibertec.cibertecapp.notas
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.PopupMenu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.cibertecapp.R
+import com.cibertec.cibertecapp.WelcomeActivity
+import com.cibertec.cibertecapp.menu.MenuActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 
-class NotaActivity:AppCompatActivity() {
+class NotaActivity:AppCompatActivity(), PopupMenu.OnMenuItemClickListener {
 
     private lateinit var viewModel: NotaViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +33,8 @@ class NotaActivity:AppCompatActivity() {
         val recyclerNotas = findViewById<RecyclerView>(R.id.recyclerNotas)
         val floatingRegister = findViewById<FloatingActionButton>(R.id.floatingRegister)
         floatingRegister.setOnClickListener{
-            registerAndUpdateNote()
+            //registerAndUpdateNote()
+            showPopup(it)
         }
 
         val adapter = NotaAdapter()
@@ -76,4 +84,27 @@ class NotaActivity:AppCompatActivity() {
     fun LocalDateTime.formatChangeNote() : String
             = this.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss"))
 
+
+    private fun showPopup(v : View){
+        val popup = PopupMenu(this,v)
+        val inflater: MenuInflater = popup.menuInflater
+        inflater.inflate(R.menu.menu_emergente,popup.menu)
+        popup.setOnMenuItemClickListener(this)
+        popup.show()
+    }
+
+    override fun onMenuItemClick(item: MenuItem?): Boolean {
+        return  when(item?.itemId){
+            R.id.itemOpcion1 -> {
+                registerAndUpdateNote()
+                true
+            }
+            R.id.itemOpcion2 -> {
+                val intent = Intent(this, MenuActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> false
+        }
+    }
 }

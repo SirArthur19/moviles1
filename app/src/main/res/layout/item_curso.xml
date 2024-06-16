@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
         android:elevation="10dp">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical">
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/imgCurso"
-                android:layout_width="100dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/logocibertec"
-                android:layout_marginStart="10dp"/>
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/logocibertec"/>
 
             <TextView
                 android:id="@+id/textCurso"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nombre de Curso"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:textColor="#033046"/>
+                android:textColor="#033046"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:maxLines="2"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>

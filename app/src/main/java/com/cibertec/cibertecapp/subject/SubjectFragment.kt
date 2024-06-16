@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,8 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.cibertecapp.R
 import com.cibertec.cibertecapp.cursos.Curso
 import com.cibertec.cibertecapp.cursos.CursosAdapter
+import com.cibertec.cibertecapp.menu.MenuDrawerAction
 
 class SubjectFragment:Fragment() {
+
+    lateinit var interfaceMenu : MenuDrawerAction
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,7 +27,12 @@ class SubjectFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val toolbarSubject = view.findViewById<Toolbar>(R.id.toolbarSubject)
         val recyclerCursos = view.findViewById<RecyclerView>(R.id.recyclerCursos)
+        toolbarSubject.setNavigationOnClickListener {
+            interfaceMenu.openMenu()
+        }
 
         val listCurso = listOf<Curso>(
             Curso("Curso de Android", R.drawable.logo_android),

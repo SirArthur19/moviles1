@@ -4,14 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.cibertec.cibertecapp.R
+import com.cibertec.cibertecapp.menu.MenuDrawerAction
 import com.cibertec.cibertecapp.noticias.Noticia
 import com.cibertec.cibertecapp.noticias.NoticiasAdapter
 
 class NewsFragment:Fragment() {
+
+    lateinit var interfaceMenu : MenuDrawerAction
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,7 +27,25 @@ class NewsFragment:Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val toolbarNews = view.findViewById<Toolbar>(R.id.toolbarNews)
         val recyclerNoticias = view.findViewById<RecyclerView>(R.id.recyclerNoticias)
+        toolbarNews.setNavigationOnClickListener {
+            interfaceMenu.openMenu()
+            }
+        toolbarNews.inflateMenu(R.menu.menu_toolbar)
+        toolbarNews.setOnMenuItemClickListener {
+            when(it.itemId){
+                R.id.itemCompartir -> {
+                    Toast.makeText(context,"Compartido",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.itemActualizar -> {
+                    Toast.makeText(context,"Se actualizó con éxito",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+        }
 
         val listNoticia = listOf<Noticia>(
             Noticia(
