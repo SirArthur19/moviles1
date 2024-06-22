@@ -26,7 +26,7 @@
         </ImageView>
     </androidx.cardview.widget.CardView>
 
-    <!--
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtSearchBox"
         android:layout_width="match_parent"
@@ -45,8 +45,9 @@
             android:hint="Buscar"/>
 
     </com.google.android.material.textfield.TextInputLayout>
-    -->
 
+
+    <!--
     <com.google.android.material.search.SearchBar
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
@@ -67,6 +68,7 @@
         </com.google.android.material.search.SearchView>
 
     </com.google.android.material.search.SearchBar>
+    -->
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -74,7 +76,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         tools:listitem="@layout/item_marca"
-        app:layout_constraintTop_toBottomOf="@+id/searchBar">
+        app:layout_constraintTop_toBottomOf="@+id/edtSearchBox">
     </androidx.recyclerview.widget.RecyclerView>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -83,7 +85,7 @@
         android:layout_height="wrap_content"
         tools:listitem="@layout/item_producto"
         app:layout_constraintTop_toBottomOf="@+id/recyclerMarcas"
-        android:layout_margin="1dp">
+        android:layout_margin="5dp">
 
     </androidx.recyclerview.widget.RecyclerView>
 

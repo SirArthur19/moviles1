@@ -37,11 +37,15 @@ class InicioFragment:Fragment() {
         )
 
         val listInicio2 = listOf<Producto>(
-            Producto("Asus","Rog Strix G15", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
-            Producto("Asus","Rog Strix G15", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
-            Producto("Asus","Rog Strix G15", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
-            Producto("Asus","Rog Strix G15", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
-            Producto("Asus","Rog Strix G15", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%")
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%"),
+            Producto("Rog Strix G15","Asus", R.drawable.item_laptop,"S/. 7650","Norma S/. 8650","-10%")
+
         )
 
         val adapter1 = MarcaAdapter(listInicio1)
