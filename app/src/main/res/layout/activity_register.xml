@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".auth.LoginActivity"
+    android:background="#FFFFFF">
 
     <ImageView
         android:layout_width="200dp"
@@ -20,6 +21,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtNombre"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Nombre"/>
@@ -31,6 +33,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtApellidos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Apellidos"/>
@@ -70,6 +73,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtPasswordRepeat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="textPassword"
