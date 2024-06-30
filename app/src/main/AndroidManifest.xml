@@ -14,8 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cibertecapp"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC66OPF-bNewnUeNffX_fY5pMu2rfoFiX0"/>
+
         <activity
-            android:name=".auth.LoginActivity"
+            android:name=".menu.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +29,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".menu.MenuActivity" />
+        <!-- <activity android:name=".menu.MenuActivity" /> -->
+
+        <!-- <activity android:name=".auth.LoginActivity" /> -->
 
         <activity android:name=".auth.RegisterActivity" />
 
