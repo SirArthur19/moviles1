@@ -15,6 +15,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 
 class LugarMapFragment:Fragment(), OnMapReadyCallback {
 
@@ -63,9 +64,29 @@ class LugarMapFragment:Fragment(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
+//        location?.let {
+//            googleMap.addMarker(MarkerOptions().position(it).title(nombre))
+//            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(it, 17f))
+//        }
+
         location?.let {
-            googleMap.addMarker(MarkerOptions().position(it).title("Ubicación"))
+            val marker = googleMap.addMarker(MarkerOptions().position(it).title(nombre))
             googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(it, 17f))
+
+            googleMap.setInfoWindowAdapter(object : GoogleMap.InfoWindowAdapter {
+                override fun getInfoContents(marker: Marker): View? {
+                    val infoView = layoutInflater.inflate(R.layout.custom_info_window, null)
+                    val txt_info_nombre = infoView.findViewById<TextView>(R.id.txt_info_nombre)
+                    txt_info_nombre.text = marker?.title
+                    return infoView
+                }
+
+                override fun getInfoWindow(marker: Marker): View? {
+                    return null
+                }
+            })
+
+            marker?.showInfoWindow()
         }
     }
 
