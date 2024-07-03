@@ -7,6 +7,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.cibertec.cibertecapp.R
+import com.cibertec.cibertecapp.lugar.LugarFragment
 import com.cibertec.cibertecapp.map.MapFragment
 import com.cibertec.cibertecapp.news.NewsFragment
 import com.cibertec.cibertecapp.notas.NotaActivity
@@ -26,16 +27,16 @@ class MenuActivity:AppCompatActivity(), MenuDrawerAction {
         nav_view.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.itemNews -> {
-//                    val fragment = NewsFragment.newInstance()
+                    val fragment = NewsFragment.newInstance()
 //                    fragment.interfaceMenu = this
                     //Prueba Mapa
-                    val fragment = MapFragment.newInstance()
+//                    val fragment = MapFragment.newInstance()
                     openFragment(fragment)
                     true
                 }
                 R.id.itemSubject -> {
                     val fragment = SubjectFragment.newInstance()
-                    fragment.interfaceMenu = this
+//                    fragment.interfaceMenu = this
                     openFragment(fragment)
                     true
                 }

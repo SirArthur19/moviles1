@@ -20,7 +20,7 @@
             android:value="AIzaSyC66OPF-bNewnUeNffX_fY5pMu2rfoFiX0"/>
 
         <activity
-            android:name=".menu.MenuActivity"
+            android:name=".lugar.MenuActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

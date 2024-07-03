@@ -43,7 +43,7 @@ class NewsFragment:Fragment() {
 
         toolbarNews.setNavigationOnClickListener {
             interfaceMenu.openMenu()
-            }
+        }
         toolbarNews.inflateMenu(R.menu.menu_toolbar)
         toolbarNews.setOnMenuItemClickListener {
             when(it.itemId){
