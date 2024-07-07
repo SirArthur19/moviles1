@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
 
 android {
@@ -50,6 +51,9 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
 
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //Crashlitycs
+    implementation("com.google.firebase:firebase-crashlytics")
 
     //Google Maps
     implementation("com.google.android.gms:play-services-maps:19.0.0")

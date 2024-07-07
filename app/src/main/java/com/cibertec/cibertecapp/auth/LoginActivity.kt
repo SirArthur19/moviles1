@@ -11,7 +11,7 @@ import com.cibertec.cibertecapp.R
 import com.cibertec.cibertecapp.menu.MenuActivity
 
 class LoginActivity : AppCompatActivity() {
-
+    //
     private lateinit var viewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
